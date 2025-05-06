@@ -8053,8 +8053,8 @@ h1, h2, h3, h4, h5,
     .social-media p a span {
       color: #fff; }
     .social-media p a:hover {
-      background: #00bd56;
-      border-color: #00bd56; }
+      background: #207dff/*#00bd56*/;
+      border-color: #fff/*#00bd56*/; }
       .social-media p a:hover span {
         color: #fff; }
 
@@ -8419,7 +8419,7 @@ h1, h2, h3, h4, h5,
     color: #fff; }
     .btn.btn-primary:hover {
       border: 1px solid #207dff/*#00bd56*/; /*muda a cor da borda do 'saiba mais' quando o mouse está em cima*/
-      background: transparent;
+      background: white;
       color: #207dff/*#00bd56*/; } /*muda a cor do escrito 'saiba mais' quando coloca o mouse em cima*/
     .btn.btn-primary.btn-outline-primary { 
       border: 1px solid #00bd56;
@@ -8908,9 +8908,9 @@ textarea.form-control {
     width: 60%;
     margin: 0 auto; }
     .block-7 .btn-primary:hover, .block-7 .btn-primary:focus {
-      background: #00bd56 !important; /*muda a cor da parte de preços quando o mouse está em cima*/
+      background: #fff/*#00bd56*/ !important; /*muda a cor da parte de preços quando o mouse está em cima*/
       /*mudar o botão do 'Get Started' para ficar igual ao do 'Saiba Mais' = 'Transparente'?*/
-      color: #fff; }
+      color: #207dff; }
   .block-7:hover, .block-7:focus {
     -webkit-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.11);
