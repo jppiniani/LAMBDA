@@ -8834,6 +8834,10 @@ textarea.form-control {
     .ftco-section {
       padding: 6em 0; } }
 
+.blur-background{
+  filter: blur(8px);
+}
+
 .ftco-bg-dark {
   background: #3c312e; }
 
