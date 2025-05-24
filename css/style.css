@@ -8011,10 +8011,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #00bd56; }
+  color: #4693FF; /*#00bd56;*/ }
   a:hover, a:focus {
     text-decoration: none;
-    color: #00bd56;
+    color: #207dff; /*#00bd56;*/
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -8104,7 +8104,7 @@ h1, h2, h3, h4, h5,
       height: 2px;
       bottom: 0px;
       left: 0;
-      background-color: #00bd56;
+      background-color: #207dff;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -8505,7 +8505,7 @@ h1, h2, h3, h4, h5,
     margin-top: -50px; }
     .services .icon span {
       font-size: 40px;
-      color: #a7d1eb/*#00bd56*/; } /*muda a cor do bonequinho em cima do 'passeio' do 'inicio'*/
+      color: #207dff /* #a7d1eb #00bd56*/; } /*muda a cor do bonequinho em cima do 'passeio' do 'inicio'*/
   .services .media-body {
     margin-top: 40px;
     -moz-transition: all 0.3s ease;
@@ -8538,7 +8538,7 @@ h1, h2, h3, h4, h5,
       .services .media-body .btn-custom span {
         color: #fff; }
   .services:hover, .services.active {
-    background: #a7d1eb/*#00bd56*/; /*muda a cor do fundo do texto da parte 'passeio'*/}
+    background: #6DB6FF/*#00bd56*/; /*muda a cor do fundo do texto da parte 'passeio'*/}
     .services:hover .icon, .services.active .icon {
       background: #fff; }
     .services:hover .media-body, .services.active .media-body {
@@ -9103,7 +9103,7 @@ textarea.form-control {
   0% {
     -moz-box-shadow: 0 0 0 0 rgba(0, 189, 86, 0.4);
     -webkit-box-shadow: 0 0 0 0 rgba(0, 189, 86, 0.4);
-    box-shadow: 0 0 0 0 rgba(0, 189, 86, 0.4); }
+    box-shadow: 0 0 0 0 rgba(0, 85, 171, 0.8); }
   70% {
     -moz-box-shadow: 0 0 0 30px rgba(0, 189, 86, 0);
     -webkit-box-shadow: 0 0 0 30px rgba(0, 189, 86, 0);
@@ -9136,6 +9136,12 @@ textarea.form-control {
 
 .heading-section.heading-section-white p {
   color: rgba(255, 255, 255, 0.9); }
+
+.img-3{ /*imagem serviços*/
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .img,
 .blog-img,
@@ -9707,7 +9713,7 @@ textarea.form-control {
       color: #ccc; }
     .categories li a:hover, .categories li a:focus, .sidelink li a:hover, .sidelink li a:focus {
       outline: none;
-      color: #00bd56; }
+      color: #207dff; }
   .categories li.active a, .sidelink li.active a {
     color: #00bd56; }
     .categories li.active a span, .sidelink li.active a span {
