@@ -8678,7 +8678,7 @@ h1, h2, h3, h4, h5,
   .staff .text {
     position: relative;
     background: #fff;
-    -moz-transition: all 0.3s ease;
+    -moz-transition: all 0.1s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -8701,8 +8701,13 @@ h1, h2, h3, h4, h5,
       display: inline-block;
       margin-bottom: 10px;
       font-size: 14px; }
+      
     .staff .text .faded {
+      
       opacity: 1; }
+      .staff .text .faded p {
+  text-align: justify;}
+      
   .staff .ftco-social {
     position: absolute;
     top: -50px;
