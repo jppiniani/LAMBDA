@@ -9822,3 +9822,77 @@ textarea.form-control {
    .wrap {
     background-color: rgb(255, 193, 7) !important; /*amarelo*/
 }
+
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;  /*reset*/
+  }
+.game-board 
+{
+  width : 100%;
+  height : 500px;
+  border-bottom: 15px solid rgb(35, 160, 35); /*borda*/
+  margin : 0 auto;
+  position : relative;
+  overflow: hidden; /*tudo que sair da borda, some*/
+  background: linear-gradient(#87ceeb, #e0f6ff)
+}
+
+.fence {
+position : absolute ;
+bottom : -11px ;
+width: 120px ;
+animation: fence-animation 1.5s infinite linear ;
+}
+.cachorrocorrendo 
+{
+  width: 130px;
+  position: absolute;
+  bottom:-41px;
+  
+}
+.jump 
+{
+  animation: jump 500ms ease-out;
+}
+
+.clouds 
+{
+  position : absolute;
+  width : 550px;
+  animation: clouds-animation 15s infinite linear;
+}
+
+@keyframes fence-animation /*definindo as animações*/
+{
+  from 
+  {
+    right :-80px;
+  }
+  to 
+  {
+    right : 100%;
+  }
+}
+
+@keyframes jump 
+{
+  0% {bottom: -41px;}
+  40% {bottom:120px;}
+  50% {bottom:120px;}
+  60% {bottom:120px;}
+  100% {bottom:-41px;}
+}
+
+@keyframes clouds-animation 
+{
+  from 
+  {
+    right: -550px;
+  }
+  to
+  {
+    right : 100%;
+  }
+}
