@@ -24,7 +24,7 @@ const jump = () =>
     /*+ converte para number*/
      const cachorrocorrendoPosition = +window.getComputedStyle(cachorrocorrendo).bottom.replace('px','');
 
-     if(fencePosition <= 80 && fencePosition > 0 && cachorrocorrendoPosition < 25) 
+     if(fencePosition <= 80 && fencePosition > -50 && cachorrocorrendoPosition < 25) 
         {
             fence.style.animation ='none'; /* cancela a animação da cerca */
             fence.style.left = `${fencePosition}px`; /*quando bater vai parar na posição*/
