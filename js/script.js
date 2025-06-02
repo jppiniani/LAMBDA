@@ -44,7 +44,7 @@ const loop = setInterval(() => {
         cachorrocorrendo.style.animation = 'none';
         cachorrocorrendo.style.bottom = `${cachorrocorrendoPosition}px`;
 
-        cachorrocorrendo.src = './images/cachorroparado.gif';
+        cachorrocorrendo.src = './images/cachorroparado(1).png';
         
         clearInterval(loop); // Para o loop principal do jogo
         clearInterval(scoreIntervalId); // PARA A CONTAGEM DE PONTOS (Novo)
