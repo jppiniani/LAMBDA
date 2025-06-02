@@ -1,47 +1,65 @@
-/* pega a imagem do cachorro */
+// Pega a imagem do cachorro
 const cachorrocorrendo = document.querySelector('.cachorrocorrendo');
-/* pega a imagem da cerca */
+// Pega a imagem da cerca
 const fence = document.querySelector('.fence');
+// Pega o elemento que mostrará a pontuação
+const scoreDisplay = document.getElementById('scoreValue'); // Novo
 
+let currentScore = 0; // Variável para guardar a pontuação atual
+let scoreIntervalId;  // Variável para guardar o ID do intervalo da pontuação
 
+// Função para atualizar a pontuação na tela
+function updateScore() {
+    currentScore++; // Incrementa a pontuação
+    scoreDisplay.textContent = String(currentScore).padStart(5, '0'); // Mostra com 5 dígitos (ex: 00123)
+}
 
-const jump = () => 
-    {
-        cachorrocorrendo.classList.add('jump'); /* adiciona a classe jump que contem a animação de pulo */
-        setTimeout(() => 
-        {
-        cachorrocorrendo.classList.remove('jump'); /* remove a classe jump, para poder pular novamente */
-        },500); /* após 500ms */
+// Função para iniciar a contagem de pontos
+function startScoring() {
+    currentScore = 0; // Reseta a pontuação
+    scoreDisplay.textContent = String(currentScore).padStart(5, '0'); // Mostra pontuação inicial
+    // Limpa qualquer intervalo anterior para evitar múltiplos contadores
+    if (scoreIntervalId) {
+        clearInterval(scoreIntervalId);
     }
+    // Inicia um intervalo para chamar updateScore a cada 100ms (ajuste para velocidade desejada)
+    scoreIntervalId = setInterval(updateScore, 100); 
+}
 
-    
-    const loop = setInterval (() =>{
+const jump = () => {
+    cachorrocorrendo.classList.add('jump');
+    setTimeout(() => {
+        cachorrocorrendo.classList.remove('jump');
+    }, 500);
+}
+
+const loop = setInterval(() => {
+    const fencePosition = fence.offsetLeft;
+    const cachorrocorrendoPosition = +window.getComputedStyle(cachorrocorrendo).bottom.replace('px', '');
+
+    if (fencePosition <= 80 && fencePosition > -50 && cachorrocorrendoPosition < 25) {
+        fence.style.animation = 'none';
+        fence.style.left = `${fencePosition}px`;
+
+        cachorrocorrendo.style.animation = 'none';
+        cachorrocorrendo.style.bottom = `${cachorrocorrendoPosition}px`;
+
+        cachorrocorrendo.src = './images/cachorroparado.gif';
         
-     const fencePosition = fence.offsetLeft; /*vai armazenar o deslocamento esquerdo da cerca, ques está diminuindo*/
+        clearInterval(loop); // Para o loop principal do jogo
+        clearInterval(scoreIntervalId); // PARA A CONTAGEM DE PONTOS (Novo)
 
-    /*acessa o estilo que foi computado na imagem do cachorro pela propriedade bottom*/ 
-    /*replace substitui o px por nada na string de saida*/ 
-    /*+ converte para number*/
-     const cachorrocorrendoPosition = +window.getComputedStyle(cachorrocorrendo).bottom.replace('px','');
+        // Adiciona um pequeno delay antes de mostrar um alerta com a pontuação final
+        setTimeout(() => {
+            alert(`Fim de Jogo! Sua pontuação: ${currentScore}`); // Mostra pontuação final
+            location.reload(); // Reinicia o jogo após o alerta
+        }, 100); // Pequeno delay para garantir que a última pontuação seja registrada visualmente
 
-     if(fencePosition <= 80 && fencePosition > -50 && cachorrocorrendoPosition < 25) 
-        {
-            fence.style.animation ='none'; /* cancela a animação da cerca */
-            fence.style.left = `${fencePosition}px`; /*quando bater vai parar na posição*/
+    }
+}, 10);
 
-            cachorrocorrendo.style.animation ='none'; /* cancela a animação do cachorro */
-            cachorrocorrendo.style.bottom = `${cachorrocorrendoPosition}px`; /*quando bater vai parar na posição*/
-
-            cachorrocorrendo.src = './images/cachorroparado.gif' /*muda a imagem do cachorro correndo para cachorro parado*/
-            clearInterval(loop); /*termina de rodar o loop*/
-            
-            setTimeout(() => {
-                location.reload(); /* reinicia o jogo após 1 segundo */
-            }, 1000);
-
-        }
-
-    },10); /*após 10ms*/
-
-/* Quando alguma tecla for pressionada, a função jump será executada */
+// Quando alguma tecla for pressionada, a função jump será executada
 document.addEventListener('keydown', jump);
+
+// Inicia a contagem de pontos quando o script é carregado (ou seja, quando o jogo começa)
+startScoring(); // Novo

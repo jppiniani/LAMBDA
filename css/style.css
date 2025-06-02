@@ -9864,6 +9864,8 @@ animation: fence-animation 1.5s infinite linear ;
   animation: clouds-animation 15s infinite linear;
 }
 
+
+
 @keyframes fence-animation /*definindo as animações*/
 {
   from 
@@ -9896,3 +9898,47 @@ animation: fence-animation 1.5s infinite linear ;
     right : 100%;
   }
 }
+
+
+@font-face {
+  font-family: 'MinhaFontePixel';
+ 
+  src: url('./Pixelmania.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;  
+}
+
+.score-container {
+    position: absolute; 
+    top: 25px;         
+    left: 15%;     
+    transform: translateX(-50%);
+    font-size: 15px;    
+    color: #221D23;     
+    font-family: 'MinhaFontePixel', sans-serif; 
+    font-weight: bold;
+    z-index: 10;        
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.75); 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game-area-wrapper { 
+    background-image: url('/images/backgroundDOG8.png'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    
+    .LambdaMiniGame {
+
+    font-size: 20px;    
+    color: #221D23;     
+    font-family: 'MinhaFontePixel', sans-serif; 
+    font-weight: bold;
+    padding: 5px 15px;
+    
+   
+    }
+
+   
