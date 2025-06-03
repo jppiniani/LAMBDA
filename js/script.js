@@ -5,6 +5,8 @@ const fence = document.querySelector('.fence');
 // Pega o elemento que mostrará a pontuação
 const scoreDisplay = document.getElementById('scoreValue'); // Novo
 
+const roblox = document.querySelector('.roblox')
+
 let currentScore = 0; // Variável para guardar a pontuação atual
 let scoreIntervalId;  // Variável para guardar o ID do intervalo da pontuação
 
@@ -56,6 +58,11 @@ const loop = setInterval(() => {
         }, 100); // Pequeno delay para garantir que a última pontuação seja registrada visualmente
 
     }
+
+    if(currentScore>=200){
+        roblox.classList.remove('escondido');
+    }
+
 }, 10);
 
 // Quando alguma tecla for pressionada, a função jump será executada

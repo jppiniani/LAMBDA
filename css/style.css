@@ -9836,7 +9836,7 @@ textarea.form-control {
   margin : 0 auto;
   position : relative;
   overflow: hidden; /*tudo que sair da borda, some*/
-  background: linear-gradient(#87ceeb, #e0f6ff)
+  background: linear-gradient(#87ceeb, #e0f6ff);
 }
 
 .fence {
@@ -9860,8 +9860,23 @@ animation: fence-animation 1.5s infinite linear ;
 .clouds 
 {
   position : absolute;
-  width : 550px;
+  width : 450px;
   animation: clouds-animation 15s infinite linear;
+}
+
+.montanha{
+  position : absolute;
+  width: 100.1%;
+  height: 100%;
+  animation: moutain-animation 70s infinite linear;
+}
+
+.montanha-a {
+  left: 0%;
+}
+
+.montanha-b {
+  left: 100%;
 }
 
 
@@ -9891,7 +9906,7 @@ animation: fence-animation 1.5s infinite linear ;
 {
   from 
   {
-    right: -550px;
+    right: -450px;
   }
   to
   {
@@ -9899,6 +9914,15 @@ animation: fence-animation 1.5s infinite linear ;
   }
 }
 
+@keyframes moutain-animation 
+{
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Move a imagem para a esquerda pela sua largura total */
+  }
+}
 
 @font-face {
   font-family: 'MinhaFontePixel';
@@ -9925,7 +9949,7 @@ animation: fence-animation 1.5s infinite linear ;
 }
 
 .game-area-wrapper { 
-    background-image: url('/images/backgroundDOG8.png'); 
+    background-image: url('../images/backgroundDOG8.png'); 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
@@ -9937,8 +9961,15 @@ animation: fence-animation 1.5s infinite linear ;
     font-family: 'MinhaFontePixel', sans-serif; 
     font-weight: bold;
     padding: 5px 15px;
-    
-   
     }
 
+.roblox{
+  position: absolute;
+  bottom: 60%;
+  right: 60%;
+}
+
+.escondido{
+  display: none;
+}
    
