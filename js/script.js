@@ -53,7 +53,7 @@ const loop = setInterval(() => {
 
         // Adiciona um pequeno delay antes de mostrar um alerta com a pontuação final
         setTimeout(() => {
-            alert(`Fim de Jogo! Sua pontuação: ${currentScore}`); // Mostra pontuação final
+            /*alert(`Fim de Jogo! Sua pontuação: ${currentScore}`);*/ // Mostra pontuação final
             location.reload(); // Reinicia o jogo após o alerta
         }, 100); // Pequeno delay para garantir que a última pontuação seja registrada visualmente
 
