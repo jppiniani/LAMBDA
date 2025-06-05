@@ -8706,7 +8706,7 @@ h1, h2, h3, h4, h5,
       
       opacity: 1; }
       .staff .text .faded p {
-  text-align: justify;}
+  text-align: start;}
       
   .staff .ftco-social {
     position: absolute;
@@ -9866,7 +9866,7 @@ animation: fence-animation 1.5s infinite linear ;
 
 .montanha{
   position : absolute;
-  width: 100.1%;
+  width: 100.3%;
   height: 100%;
   animation: moutain-animation 70s infinite linear;
 }
@@ -9967,6 +9967,13 @@ animation: fence-animation 1.5s infinite linear ;
   position: absolute;
   bottom: 60%;
   right: 60%;
+}
+
+.game-over{
+  position: absolute;
+  bottom: 60%;
+  right: 60%;
+  width: 20%;
 }
 
 .escondido{

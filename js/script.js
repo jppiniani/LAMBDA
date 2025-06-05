@@ -6,6 +6,8 @@ const fence = document.querySelector('.fence');
 const scoreDisplay = document.getElementById('scoreValue');
 // Pega a imagem do roblox
 const roblox = document.querySelector('.roblox');
+// Pega a imagem gameover
+const gameover = document.querySelector('.game-over');
 // Pega o botão de reiniciar
 const restartbutton = document.getElementById("restartbutton");
 
@@ -82,11 +84,13 @@ bgm.pause();
 bgm.currentTime = 0; //reinicia o tempo da musica, caso jogador reinicie
 
     restartbutton.style.display = "block";
-    roblox.classList.remove("escondido");
+    gameover.classList.remove("escondido");
+    roblox.classList.add('escondido');
 }
  
 // Quando uma tecla for pressionada, o cachorro pula
 document.addEventListener('keydown', jump);
+document.addEventListener('click', jump);
 
 // Clique no botão de reinício
 restartbutton.addEventListener("click", function () {
