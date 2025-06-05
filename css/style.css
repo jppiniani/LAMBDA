@@ -9972,4 +9972,28 @@ animation: fence-animation 1.5s infinite linear ;
 .escondido{
   display: none;
 }
-   
+  /*botão de reiniciar*/
+  .game-board {
+    position: relative; /* necessário para o posicionamento relativo do botão */
+  }
+  
+  .restart-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .restart-button:hover {
+    background-color: #0056b3;
+  }
+  
