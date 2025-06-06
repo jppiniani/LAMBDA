@@ -386,8 +386,30 @@ mark,
     content: "\2014\00A0"; }
 
 .img-fluid {
+  max-width: 80%;
+  height: auto; 
+}
+
+.img-fluid2 {
   max-width: 100%;
-  height: auto; }
+  height: auto; 
+  margin-top: 23px;
+}
+
+.img-fluid3 {
+  max-width: 100%;
+  height: auto; 
+  margin-top: 23px;
+  
+}
+.img-fluid1 {
+  max-width: 100%;
+  height: auto; 
+  margin-top: 220px;
+  
+}
+
+
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -10004,3 +10026,24 @@ animation: fence-animation 1.5s infinite linear ;
     background-color: #0056b3;
   }
   
+.titulo-secao 
+{
+  margin-top: 50px;
+}
+
+.sobre1 
+{
+  margin-top: 100px;
+  margin-left: 89px;
+}
+
+.sobre2 
+{
+  margin-top: 70px;
+}
+
+.sobre3 
+{
+  margin-top: 50px;
+}
+
