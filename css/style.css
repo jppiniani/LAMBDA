@@ -9872,7 +9872,6 @@ animation: fence-animation 1.5s infinite linear ;
   width: 130px;
   position: absolute;
   bottom:-41px;
-  
 }
 .jump 
 {
@@ -9988,13 +9987,13 @@ animation: fence-animation 1.5s infinite linear ;
 .roblox{
   position: absolute;
   bottom: 60%;
-  right: 60%;
+  right: 41%;
 }
 
 .game-over{
   position: absolute;
   bottom: 60%;
-  right: 60%;
+  right: 41%;
   width: 20%;
 }
 
@@ -10007,14 +10006,15 @@ animation: fence-animation 1.5s infinite linear ;
   }
   
   .restart-button {
+    font-family: 'MinhaFontePixel', sans-serif; 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 15px 30px;
     font-size: 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 8px;
     display: none;
@@ -10023,7 +10023,7 @@ animation: fence-animation 1.5s infinite linear ;
   }
   
   .restart-button:hover {
-    background-color: #0056b3;
+    background-color: #979797;
   }
   
 .titulo-secao 
