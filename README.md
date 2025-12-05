@@ -46,5 +46,5 @@
 
 <h3>Objetivo Geral</h3>
 
-O objetivo geral do projeto foi introduzir a nós, alunos calouros, as principais ferramentas básicas de desenvolvimento web por meio do desenvolvimento de um website que garantisse uma identidade digital madura para uma empresa. (Neste caso, a empresa fictícia Lambda).
+O objetivo geral do projeto foi introduzir a nós, alunos calouros, as principais ferramentas básicas de desenvolvimento web por meio da construção de um website que garantisse uma identidade digital madura para uma empresa. (Neste caso, a empresa fictícia Lambda).
 Além disso, o projeto foi realizado em grupo para que os estudantes aprendessem a dominar o trabalho coletivo.
